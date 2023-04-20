@@ -24,7 +24,7 @@ lr = load('logistic')
 dt = load('decision')
 mnb = load('multinomial')
 bnb = load('bernoulli')
-rf = load('random')
+rf = load('random.zip')
 xgb = load('xgb')
 
 test_df = pd.read_csv('test.csv')
