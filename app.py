@@ -15,6 +15,8 @@ from nltk.stem.porter import PorterStemmer
 from wordcloud import WordCloud
 from PIL import Image
 
+nltk.download('stopwords')
+
 st.set_page_config(layout = 'wide')
 
 cover_photo = Image.open('cover.jpg')
