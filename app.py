@@ -27,7 +27,7 @@ bnb = load('bernoulli')
 #rf = load('random')
 xgb = load('xgb')
 
-test_df = pd.read_csv('test.csv')
+test_df = pd.read_csv('test.zip')
 x = test_df.news
 y = test_df.label
 
