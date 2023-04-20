@@ -24,19 +24,19 @@ lr = load('logistic')
 dt = load('decision')
 mnb = load('multinomial')
 bnb = load('bernoulli')
-rf = load('random')
+#rf = load('random')
 xgb = load('xgb')
 
 test_df = pd.read_csv('test.csv')
 x = test_df.news
 y = test_df.label
 
-scores = [lr.score(x, y), dt.score(x, y), mnb.score(x, y), bnb.score(x, y), rf.score(x, y), xgb.score(x, y)]
+scores = [lr.score(x, y), dt.score(x, y), mnb.score(x, y), bnb.score(x, y), xgb.score(x, y)]
 accuracy = []
 for i in scores:
      accuracy.append(i * 100)
 
-Technique = ['LogisticRegression', 'DecisionTreeClassifier', 'MultinomialNB', 'BernoulliNB', 'RandomForestClassifier', 'XGBClassifier']
+Technique = ['LogisticRegression', 'DecisionTreeClassifier', 'MultinomialNB', 'BernoulliNB', 'XGBClassifier']
 results = pd.DataFrame({'Model': Technique, 'Accuracy': accuracy})
 results = results.sort_values('Accuracy', ascending = False)
 
@@ -87,7 +87,7 @@ with tab2:
         return corpus
 
     models = ['LogisticRegression', 'DecisionTreeClassifier', 'MultinomialNB', 'BernoulliNB',
-              'RandomForestClassifier', 'XGBClassifier']
+              'XGBClassifier']
 
     cls = []
     cls_labels = {0: 'FAKE', 1: 'REAL'}
@@ -104,8 +104,8 @@ with tab2:
             cls.append(mnb.predict(text)[0])
         elif model_choice == 'BernoulliNB':
             cls.append(bnb.predict(text)[0])
-        elif model_choice == 'RandomForestClassifier':
-            cls.append(rf.predict(text)[0])
+        #elif model_choice == 'RandomForestClassifier':
+        #    cls.append(rf.predict(text)[0])
         elif model_choice == 'XGBClassifier':
             cls.append(xgb.predict(text)[0])
         else:
