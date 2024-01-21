@@ -1,4 +1,4 @@
-# Fake-News-Classification-System
+# Fake News Classification System
 
 The Fake News Classification System project showcases my expertise in Python, Machine Learning, Natural Language Processing (NLP), and Streamlit to address the critical issue of distinguishing between fake and real news articles. The project initiated with meticulous text pre-processing using NLP techniques like tokenization, stemming, and stop words removal, enhancing the quality and relevance of the textual data.
 
